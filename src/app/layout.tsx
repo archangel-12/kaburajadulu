@@ -5,11 +5,15 @@ import "./globals.css";
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700', '800'], // Light, Regular, Medium, SemiBold, Bold, ExtraBold
+  display: 'swap',
 });
 
 const caveat = Caveat({
   variable: "--font-caveat",
   subsets: ["latin"],
+  weight: ['400', '500', '600', '700'], // Regular, Medium, SemiBold, Bold
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

@@ -1,0 +1,97 @@
+import DestinationCard from "@/components/destination-card"
+
+export default function DestinationShowcase() {
+  return (
+    <section className="py-12">
+      <div className="container mx-auto px-4">
+        {/* Responsive container with relative positioning */}
+        <div className="relative mx-auto aspect-[16/9] md:aspect-[16/9] w-full max-w-7xl">
+          {/* Seoul - large centered background card */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[90%] h-auto aspect-[2/1] z-0">
+            <DestinationCard 
+              imageUrl="/images/seoul.webp" 
+              location="Seoul, South Korea"
+              style={{
+                width: '100%',
+                height: '100%'
+              }}
+            />
+          </div>
+          
+          {/* Tokyo - rotated card at top left - now larger */}
+          <div className="absolute left-[3%] top-[12%] w-[28%] sm:w-[28%] h-auto aspect-[1.5/1] z-10">
+            <DestinationCard 
+              imageUrl="/images/tokyo.webp" 
+              location="Tokyo, Japan"
+              style={{
+                width: '100%',
+                height: '100%',
+                transform: "rotate(7.83deg)"
+              }}
+            />
+          </div>
+          
+          {/* Singapore - rotated card at top right - now larger */}
+          <div className="absolute right-[3%] top-[10%] w-[23%] sm:w-[23%] h-auto aspect-[1.56/1] z-10">
+            <DestinationCard 
+              imageUrl="/images/singapore.webp" 
+              location="Singapore"
+              style={{
+                width: '100%',
+                height: '100%',
+                transform: "rotate(6.5deg)"
+              }}
+            />
+          </div>
+          
+          {/* Berlin - rotated card at bottom right - now larger */}
+          <div className="absolute right-[12%] bottom-[4%] w-[28%] sm:w-[28%] h-auto aspect-[1.5/1] z-10">
+            <DestinationCard 
+              imageUrl="/images/berlin.webp" 
+              location="Berlin, Germany"
+              style={{
+                width: '100%',
+                height: '100%',
+                transform: "rotate(-6deg)"
+              }}
+            />
+          </div>
+          
+          {/* Text overlay - now further left */}
+          <div className="absolute left-[20%] bottom-[1%] text-primary text-xl md:text-2xl lg:text-3xl font-caveat z-20">
+            Dan Banyak Negara Lainnya...
+          </div>
+        </div>
+        
+        {/* Mobile-only view (visible only on xs screens) */}
+        <div className="block sm:hidden mt-8">
+          <div className="grid grid-cols-2 gap-4">
+            <DestinationCard 
+              imageUrl="/images/seoul.webp" 
+              location="Seoul, South Korea"
+              className="aspect-[1.5/1]"
+            />
+            <DestinationCard 
+              imageUrl="/images/tokyo.webp" 
+              location="Tokyo, Japan"
+              className="aspect-[1.5/1]"
+            />
+            <DestinationCard 
+              imageUrl="/images/singapore.webp" 
+              location="Singapore"
+              className="aspect-[1.5/1]"
+            />
+            <DestinationCard 
+              imageUrl="/images/berlin.webp" 
+              location="Berlin, Germany"
+              className="aspect-[1.5/1]"
+            />
+          </div>
+          <div className="text-left text-primary text-xl font-caveat mt-4 pl-4">
+            Dan Banyak Negara Lainnya...
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

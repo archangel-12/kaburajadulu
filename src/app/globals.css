@@ -132,3 +132,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .shadow-dc {
+    box-shadow: 2px 4px 16px 0px #0055FF52;
+  }
+  
+  .shadow-black {
+    box-shadow: 2px 4px 16px 0px #00000052;
+  }
+}

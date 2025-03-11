@@ -9,16 +9,19 @@ interface DiscordButtonProps {
 }
 
 export function DiscordButton({ variant = "filled", className, onClick }: DiscordButtonProps) {
+  const baseClasses = "h-10 px-5 rounded-full text-[14px] font-medium"
+  const iconClasses = "mr-2 -ml-1" // Adjust the negative margin to fine-tune icon position
+
   // Different button variants based on the image
   switch (variant) {
     case "outlined":
       return (
         <Button
           variant="outline"
-          className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary"
+          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${className}`}
           onClick={onClick}
         >
-          <DiscordIconBlue className="mr-2 h-5 w-5" />
+          <DiscordIconBlue className={`w-6 h-6 ${iconClasses}`} />
           Join our Discord server
         </Button>
       )
@@ -26,7 +29,7 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
       return (
         <Button
           variant="outline"
-          className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary"
+          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${className}`}
           onClick={onClick}
         >
           Join our Discord server
@@ -34,32 +37,32 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
       )
     case "filled-no-icon":
       return (
-        <Button variant="default" className="rounded-full bg-primary text-white hover:bg-primary/90" onClick={onClick}>
+        <Button
+          variant="default"
+          className={`${baseClasses} bg-primary hover:bg-primary/90 ${className}`}
+          onClick={onClick}
+        >
           Join our Discord server
         </Button>
       )
     case "filled":
     default:
       return (
-        <Button variant="default" className="rounded-full bg-primary text-white hover:bg-primary/90" onClick={onClick}>
-          <DiscordIconWhite className="mr-2 h-5 w-5" />
+        <Button
+          variant="default"
+          className={`${baseClasses} bg-primary hover:bg-primary/90 ${className}`}
+          onClick={onClick}
+        >
+          <DiscordIconWhite className={`w-6 h-6 ${iconClasses}`} />
           Join our Discord server
         </Button>
       )
   }
 }
 
-// Discord icon components using the provided SVGs
 function DiscordIconWhite({ className }: { className?: string }) {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       <g clipPath="url(#clip0_1_27)">
         <path
           d="M10.6828 12.6591C10.6828 13.6228 9.99233 14.407 9.12421 14.407C8.26968 14.407 7.56561 13.6228 7.56561 12.6591C7.56561 11.6958 8.25608 10.9111 9.12421 10.9111C9.99889 10.9111 10.6964 11.7028 10.6828 12.6591Z"
@@ -85,14 +88,7 @@ function DiscordIconWhite({ className }: { className?: string }) {
 
 function DiscordIconBlue({ className }: { className?: string }) {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       <g clipPath="url(#clip0_1_36)">
         <path
           d="M10.6828 12.6591C10.6828 13.6228 9.99233 14.407 9.12421 14.407C8.26968 14.407 7.56561 13.6228 7.56561 12.6591C7.56561 11.6958 8.25608 10.9111 9.12421 10.9111C9.99889 10.9111 10.6964 11.7028 10.6828 12.6591Z"
@@ -115,4 +111,3 @@ function DiscordIconBlue({ className }: { className?: string }) {
     </svg>
   )
 }
-
