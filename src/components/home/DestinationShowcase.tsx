@@ -18,8 +18,8 @@ export default function DestinationShowcase() {
             />
           </div>
           
-          {/* Tokyo - rotated card at top left - now larger */}
-          <div className="absolute left-[3%] top-[12%] w-[28%] sm:w-[28%] h-auto aspect-[1.5/1] z-10">
+          {/* Tokyo */}
+          <div className="absolute left-[-3%] top-[22%] w-[28%] sm:w-[28%] h-auto aspect-[1.5/1] z-10">
             <DestinationCard 
               imageUrl="/images/tokyo.webp" 
               location="Tokyo, Japan"
@@ -31,20 +31,20 @@ export default function DestinationShowcase() {
             />
           </div>
           
-          {/* Singapore - rotated card at top right - now larger */}
-          <div className="absolute right-[3%] top-[10%] w-[23%] sm:w-[23%] h-auto aspect-[1.56/1] z-10">
+          {/* Singapore */}
+          <div className="absolute right-[-2%] top-[-8%] w-[23%] sm:w-[23%] h-auto aspect-[1.56/1] z-10">
             <DestinationCard 
               imageUrl="/images/singapore.webp" 
               location="Singapore"
               style={{
                 width: '100%',
                 height: '100%',
-                transform: "rotate(6.5deg)"
+                transform: "rotate(-9.5deg)"
               }}
             />
           </div>
           
-          {/* Berlin - rotated card at bottom right - now larger */}
+          {/* Berlin */}
           <div className="absolute right-[12%] bottom-[4%] w-[28%] sm:w-[28%] h-auto aspect-[1.5/1] z-10">
             <DestinationCard 
               imageUrl="/images/berlin.webp" 
