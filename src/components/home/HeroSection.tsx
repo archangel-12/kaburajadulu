@@ -2,9 +2,9 @@ import { DiscordButton } from '../discord-button'
 
 export function HeroSection() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="container mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+    <section className="py-10 md:py-16 md:py-24">
+      <div className="container mx-auto text-center px-4 md:px-6">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6">
           "Pengen <span className="text-primary">Kabur</span> ke Luar Negeri? Gaskeun!"
         </h1>
         <p className="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">

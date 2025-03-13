@@ -6,15 +6,14 @@ export function Navbar() {
   return (
     <nav className="container mx-auto py-4 flex items-center justify-between">
       {/* Logo */}
-      <Link href="/" className="font-bold text-lg flex items-center gap-2">
+      <Link href="/" className="font-bold text-lg flex items-center">
         <Image 
-          src="/logo.png" 
-          alt="KaburAjaDulu Logo" 
-          width={32} 
+          src="/icon.svg" 
+          alt="KaburAjaDulu Logo"
+          width={160} 
           height={32} 
-          className="w-8 h-8"
+          priority
         />
-        #KaburAjaDulu
       </Link>
       
       {/* Navigation Links */}

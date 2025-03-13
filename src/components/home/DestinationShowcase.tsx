@@ -4,13 +4,14 @@ export default function DestinationShowcase() {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        {/* Responsive container with relative positioning */}
-        <div className="relative mx-auto aspect-[16/9] md:aspect-[16/9] w-full max-w-7xl">
+        {/* Responsive container with relative positioning - hidden on mobile */}
+        <div className="hidden sm:block relative mx-auto aspect-[16/9] md:aspect-[16/9] w-full max-w-7xl">
           {/* Seoul - large centered background card */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[90%] h-auto aspect-[2/1] z-0">
             <DestinationCard 
               imageUrl="/images/seoul.webp" 
               location="Seoul, South Korea"
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 90vw, 90vw"
               style={{
                 width: '100%',
                 height: '100%'
@@ -23,6 +24,7 @@ export default function DestinationShowcase() {
             <DestinationCard 
               imageUrl="/images/tokyo.webp" 
               location="Tokyo, Japan"
+              sizes="(max-width: 640px) 28vw, 28vw"
               style={{
                 width: '100%',
                 height: '100%',
@@ -36,6 +38,7 @@ export default function DestinationShowcase() {
             <DestinationCard 
               imageUrl="/images/singapore.webp" 
               location="Singapore"
+              sizes="(max-width: 640px) 23vw, 23vw"
               style={{
                 width: '100%',
                 height: '100%',
@@ -49,6 +52,7 @@ export default function DestinationShowcase() {
             <DestinationCard 
               imageUrl="/images/berlin.webp" 
               location="Berlin, Germany"
+              sizes="(max-width: 640px) 28vw, 28vw"
               style={{
                 width: '100%',
                 height: '100%',
@@ -63,28 +67,32 @@ export default function DestinationShowcase() {
           </div>
         </div>
         
-        {/* Mobile-only view (visible only on xs screens) */}
+        {/* Mobile-only view */}
         <div className="block sm:hidden mt-8">
           <div className="grid grid-cols-2 gap-4">
             <DestinationCard 
               imageUrl="/images/seoul.webp" 
               location="Seoul, South Korea"
               className="aspect-[1.5/1]"
+              sizes="(max-width: 640px) 50vw, 0vw"
             />
             <DestinationCard 
               imageUrl="/images/tokyo.webp" 
               location="Tokyo, Japan"
               className="aspect-[1.5/1]"
+              sizes="(max-width: 640px) 50vw, 0vw"
             />
             <DestinationCard 
               imageUrl="/images/singapore.webp" 
               location="Singapore"
               className="aspect-[1.5/1]"
+              sizes="(max-width: 640px) 50vw, 0vw"
             />
             <DestinationCard 
               imageUrl="/images/berlin.webp" 
               location="Berlin, Germany"
               className="aspect-[1.5/1]"
+              sizes="(max-width: 640px) 50vw, 0vw"
             />
           </div>
           <div className="text-left text-primary text-xl font-caveat mt-4 pl-4">

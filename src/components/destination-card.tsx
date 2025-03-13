@@ -8,13 +8,15 @@ interface DestinationCardProps {
   location: string
   style?: React.CSSProperties
   className?: string
+  sizes?: string
 }
 
 export default function DestinationCard({ 
   imageUrl, 
   location,
   style = {},
-  className = "" 
+  className = "",
+  sizes = "(max-width: 768px) 100vw, 50vw"
 }: DestinationCardProps) {
   return (
     <div
@@ -26,7 +28,16 @@ export default function DestinationCard({
       }}
     >
       <div className="relative h-full w-full">
-        <Image src={imageUrl || "/placeholder.svg"} alt={location} fill className="object-cover" />
+        <Image 
+          src={imageUrl || "/placeholder.svg"} 
+          alt={`Destination: ${location}`} 
+          fill 
+          className="object-cover"
+          sizes={sizes}
+          loading="eager"
+          priority={true}
+          quality={85}
+        />
         
         {/* Gradient overlay */}
         <div

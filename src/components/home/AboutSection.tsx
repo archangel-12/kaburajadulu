@@ -2,9 +2,9 @@ import { GithubButton } from "../../components/github-button";
 
 export function AboutSection() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Apa itu #KaburAjaDulu</h2>
+    <section className="py-10 md:py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl font-bold text-center mb-6 md:mb-8">Apa itu #KaburAjaDulu</h2>
         <div className="max-w-3xl mx-auto text-lg text-center">
           <p className="mb-6 font-light">
           Bukan sekadar fomo doang, <strong className="font-bold">#KaburAjaDulu</strong> adalah tempat buat lo yang mau <strong className="font-bold">kerja, kuliah,</strong> atau <strong className="font-bold">sekadar explore dunia!</strong>
