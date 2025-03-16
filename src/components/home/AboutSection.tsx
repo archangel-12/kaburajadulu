@@ -4,7 +4,7 @@ import { GithubButton } from "../../components/github-button";
 
 export function AboutSection() {
   const handleGithubClick = () => {
-    window.open('https://github.com/KaburAjaDulu-Community/kaburajadulu', '_blank');
+    window.open('https://github.com/0xrsydn/kaburajadulu', '_blank');
   };
 
   return (
