@@ -11,7 +11,7 @@ export function HeroSection() {
     <section className="py-10 md:py-16 md:py-24">
       <div className="container mx-auto text-center px-4 md:px-6">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6">
-          "Pengen <span className="text-primary">Kabur</span> ke Luar Negeri? Gaskeun!"
+          &quot;Pengen <span className="text-primary">Kabur</span> ke Luar Negeri? Gaskeun!&quot;
         </h1>
         <p className="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">
         Kalau di sini susah maju, mungkin saatnya lihat ke tempat lain. <strong className="font-bold">#KaburAjaDulu</strong> bantu lo cari jalan buat kerja, kuliah, atau sekadar explore dunia. <strong className="font-bold">Job abroad, event keren, komunitas, kelas bahasa, beasiswa, sampe blog penuh tips & trik semua</strong> ada di sini!

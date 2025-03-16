@@ -1,6 +1,12 @@
+"use client"
+
 import { GithubButton } from "../../components/github-button";
 
 export function AboutSection() {
+  const handleGithubClick = () => {
+    window.open('https://github.com/0xrsydn/kaburajadulu', '_blank');
+  };
+
   return (
     <section className="py-10 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
@@ -18,7 +24,7 @@ export function AboutSection() {
           <GithubButton 
             className="px-6 py-2 text-base" 
             ariaLabel="Jadi kontributor GitHub untuk #KaburAjaDulu"
-            href="https://github.com/0xrsydn/kaburajadulu"
+            onClick={handleGithubClick}
           />
           <a 
             href="mailto:contact@kaburajadulu.com" 

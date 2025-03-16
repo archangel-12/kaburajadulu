@@ -39,14 +39,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "#KaburAjaDulu | Jelajahi Peluang Internasional",
     description: "Temukan peluang untuk bekerja, belajar, atau menjelajahi dunia.",
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image.png'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: "#KaburAjaDulu | Jelajahi Peluang Internasional",
     description: "Temukan peluang untuk bekerja, belajar, atau menjelajahi dunia.",
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
