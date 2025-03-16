@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KaburAjaDulu
 
-## Getting Started
+KaburAjaDulu is an open-source platform helping Indonesians explore study and work opportunities abroad. Our mission is to provide accessible, accurate information and build a supportive community for those seeking international education and career paths.
 
-First, run the development server:
+## 🚀 Mission & Vision
+
+We believe that international experience can transform lives and open new horizons. Our platform aims to:
+
+- **Share job opportunities** - Find insider information about companies for referrals. This is crucial, as not all job openings are publicly advertised.
+- **Language learning** - Access expert advice from those who have already gone abroad, including tips and preparation guidance.
+- **Scholarship sharing** - Discover opportunities for studying abroad through scholarships and financial aid programs.
+- **Expert mentorship** - Learn from experienced individuals who have successfully navigated international education and career paths.
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- npm, pnpm, or yarn
+
+### Installation
 
 ```bash
-npm run dev
+# Clone the repository
+git clone https://github.com/KaburAjaDulu-Community/kaburajadulu.git
+
+# Navigate to the project
+cd kaburajadulu
+
+# Install dependencies
+npm install
 # or
-yarn dev
+pnpm install
+# or
+bun install
+
+# Start the development server
+npm run dev
 # or
 pnpm dev
 # or
 bun dev
+
+
+## 📚 Project Structure
+
+```
+/public            # Static assets
+/src
+  /app             # Next.js App Router
+  /components      # React components
+    /home          # Landing page sections
+    /layout        # Layout components
+    /ui            # UI primitives
+  /lib             # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We welcome contributions from everyone! Here's how you can help:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Code Contributions
 
-## Learn More
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+### Guidelines
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Follow the existing code style and conventions
+- Write clear, descriptive commit messages
+- Update documentation as needed
+- Add or update tests where possible
+- Be respectful and constructive in discussions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗺️ Roadmap
 
-## Deploy on Vercel
+- [x] Landing page with basic information
+- [ ] Blog with guides and resources
+- [ ] Curated list of scholarship, programs, and job opportunities
+- [ ] More to come...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built with ❤️ by the KaburAjaDulu Community
