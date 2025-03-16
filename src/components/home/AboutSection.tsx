@@ -18,9 +18,10 @@ export function AboutSection() {
           <GithubButton 
             className="px-6 py-2 text-base" 
             ariaLabel="Jadi kontributor GitHub untuk #KaburAjaDulu"
+            href="https://github.com/0xrsydn/kaburajadulu"
           />
           <a 
-            href="https://github.com/0xrsydn/kaburajadulu" 
+            href="mailto:contact@kaburajadulu.com" 
             className="text-base underline decoration-1 hover:text-primary transition-colors"
             aria-label="Berikan saran atau masukan di GitHub"
           >
