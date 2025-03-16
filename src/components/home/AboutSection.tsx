@@ -15,10 +15,14 @@ export function AboutSection() {
         </div>
         
         <div className="flex flex-row items-center justify-center mt-10 gap-6">
-          <GithubButton className="px-6 py-2 text-base" />
+          <GithubButton 
+            className="px-6 py-2 text-base" 
+            ariaLabel="Jadi kontributor GitHub untuk #KaburAjaDulu"
+          />
           <a 
-            href="#" 
+            href="https://github.com/0xrsydn/kaburajadulu" 
             className="text-base underline decoration-1 hover:text-primary transition-colors"
+            aria-label="Berikan saran atau masukan di GitHub"
           >
             Punya Saran? Spill The Tea
           </a>

@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils"
 interface GithubButtonProps {
   className?: string
   onClick?: () => void
+  ariaLabel?: string
 }
 
-export function GithubButton({ className, onClick }: GithubButtonProps) {
+export function GithubButton({ className, onClick, ariaLabel = "Jadi Kontributor Github" }: GithubButtonProps) {
   return (
     <Button
       variant="default"
@@ -20,8 +21,9 @@ export function GithubButton({ className, onClick }: GithubButtonProps) {
         className,
       )}
       onClick={onClick}
+      aria-label={ariaLabel}
     >
-      <GithubIcon className="w-6 h-6" />
+      <GithubIcon className="w-6 h-6" aria-hidden="true" />
       Jadi Kontributor Github
     </Button>
   )

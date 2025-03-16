@@ -6,9 +6,10 @@ interface DiscordButtonProps {
   variant?: "filled" | "outlined" | "outlined-no-icon" | "filled-no-icon"
   className?: string
   onClick?: () => void
+  ariaLabel?: string
 }
 
-export function DiscordButton({ variant = "filled", className, onClick }: DiscordButtonProps) {
+export function DiscordButton({ variant = "filled", className, onClick, ariaLabel = "Join our Discord server" }: DiscordButtonProps) {
   const baseClasses = "h-10 px-5 rounded-full text-[14px] font-medium"
   const iconClasses = "mr-2 -ml-1" // Adjust the negative margin to fine-tune icon position
 
@@ -20,8 +21,9 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
           variant="outline"
           className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${className}`}
           onClick={onClick}
+          aria-label={ariaLabel}
         >
-          <DiscordIconBlue className={`w-6 h-6 ${iconClasses}`} />
+          <DiscordIconBlue className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
           Join our Discord server
         </Button>
       )
@@ -31,6 +33,7 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
           variant="outline"
           className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${className}`}
           onClick={onClick}
+          aria-label={ariaLabel}
         >
           Join our Discord server
         </Button>
@@ -41,6 +44,7 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
           variant="default"
           className={`${baseClasses} bg-primary hover:bg-primary/90 ${className}`}
           onClick={onClick}
+          aria-label={ariaLabel}
         >
           Join our Discord server
         </Button>
@@ -52,8 +56,9 @@ export function DiscordButton({ variant = "filled", className, onClick }: Discor
           variant="default"
           className={`${baseClasses} bg-primary hover:bg-primary/90 ${className}`}
           onClick={onClick}
+          aria-label={ariaLabel}
         >
-          <DiscordIconWhite className={`w-6 h-6 ${iconClasses}`} />
+          <DiscordIconWhite className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
           Join our Discord server
         </Button>
       )
