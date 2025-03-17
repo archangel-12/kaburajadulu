@@ -7,11 +7,19 @@ interface DiscordButtonProps {
   className?: string
   onClick?: () => void
   ariaLabel?: string
+  iconOnly?: boolean
 }
 
-export function DiscordButton({ variant = "filled", className, onClick, ariaLabel = "Join our Discord server" }: DiscordButtonProps) {
-  const baseClasses = "h-10 px-5 rounded-full text-[14px] font-medium"
-  const iconClasses = "mr-2 -ml-1" // Adjust the negative margin to fine-tune icon position
+export function DiscordButton({ variant = "filled", className, onClick, ariaLabel = "Join our Discord server", iconOnly = false }: DiscordButtonProps) {
+  const baseClasses = "h-10 rounded-full text-[14px] font-medium"
+  
+  // Responsive icon classes based on iconOnly prop
+  const iconClasses = iconOnly 
+    ? "m-0 sm:mr-2 sm:-ml-1" // Icon-only on mobile
+    : "mr-2 -ml-1" // Always show with text
+    
+  // Text visibility classes based on iconOnly prop
+  const textClasses = iconOnly ? "hidden sm:inline" : ""
 
   // Different button variants based on the image
   switch (variant) {
@@ -19,12 +27,12 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
       return (
         <Button
           variant="outline"
-          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${className}`}
+          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"} ${className}`}
           onClick={onClick}
           aria-label={ariaLabel}
         >
           <DiscordIconBlue className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
-          Join our Discord server
+          <span className={textClasses}>Join our Discord server</span>
         </Button>
       )
     case "outlined-no-icon":
@@ -35,7 +43,7 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
           onClick={onClick}
           aria-label={ariaLabel}
         >
-          Join our Discord server
+          <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
       )
     case "filled-no-icon":
@@ -46,7 +54,7 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
           onClick={onClick}
           aria-label={ariaLabel}
         >
-          Join our Discord server
+          <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
       )
     case "filled":
@@ -54,12 +62,12 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
       return (
         <Button
           variant="default"
-          className={`${baseClasses} bg-primary hover:bg-primary/90 ${className}`}
+          className={`${baseClasses} bg-primary hover:bg-primary/90 ${iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"} ${className}`}
           onClick={onClick}
           aria-label={ariaLabel}
         >
           <DiscordIconWhite className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
-          Join our Discord server
+          <span className={textClasses}>Join our Discord server</span>
         </Button>
       )
   }

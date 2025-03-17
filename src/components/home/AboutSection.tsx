@@ -13,22 +13,19 @@ export function AboutSection() {
         <h2 className="text-3xl font-bold text-center mb-6 md:mb-8">Apa itu #KaburAjaDulu</h2>
         <div className="max-w-3xl mx-auto text-lg text-center">
           <p className="mb-6 font-light">
-          Bukan sekadar fomo doang, <strong className="font-bold">#KaburAjaDulu</strong> adalah tempat buat lo yang mau <strong className="font-bold">kerja, kuliah,</strong> atau <strong className="font-bold">sekadar explore dunia!</strong>
-          </p>
-          <p className="font-light">
-          Dari <strong className="font-bold">job abroad, beasiswa, komunitas, kelas bahasa, sampai event internasional</strong> semua ada di sini. Punya ide keren? Biar gak cuma numpang lewat, yuk kontribusi!
+          Bukan sekadar fomo doang, <strong className="font-bold">#KaburAjaDulu</strong> adalah tempat buat lo yang mau <strong className="font-bold">kerja, kuliah,</strong> atau <strong className="font-bold">sekadar explore dunia!</strong> Dari <strong className="font-bold">job abroad, beasiswa, komunitas, kelas bahasa, sampai event internasional</strong> semua ada di sini. Punya ide keren? Biar gak cuma numpang lewat, yuk kontribusi!
           </p>
         </div>
         
-        <div className="flex flex-row items-center justify-center mt-10 gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center mt-10 gap-6 sm:gap-6">
           <GithubButton 
-            className="px-6 py-2 text-base" 
+            className="px-6 py-2 text-base w-full sm:w-auto" 
             ariaLabel="Jadi kontributor GitHub untuk #KaburAjaDulu"
             onClick={handleGithubClick}
           />
           <a 
             href="mailto:contact@kaburajadulu.com" 
-            className="text-base underline decoration-1 hover:text-primary transition-colors"
+            className="text-base underline decoration-1 hover:text-primary transition-colors mt-2 sm:mt-0"
             aria-label="Berikan saran atau masukan di GitHub"
           >
             Punya Saran? Spill The Tea

@@ -16,19 +16,19 @@ export function HeroSection() {
         <p className="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">
         Kalau di sini susah maju, mungkin saatnya lihat ke tempat lain. <strong className="font-bold">#KaburAjaDulu</strong> bantu lo cari jalan buat kerja, kuliah, atau sekadar explore dunia. <strong className="font-bold">Job abroad, event keren, komunitas, kelas bahasa, beasiswa, sampe blog penuh tips & trik semua</strong> ada di sini!
         </p>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <DiscordButton 
             variant="filled" 
-            className="shadow-dc" 
+            className="shadow-dc w-full sm:w-auto" 
             onClick={handleDiscordClick}
             ariaLabel="Gabung server Discord #KaburAjaDulu"
           />
           <a 
             href="https://discord.com/company" 
-            className="text-primary hover:underline font-medium"
+            className="text-primary hover:underline font-medium mt-2 sm:mt-0"
             aria-label="Pelajari tentang aplikasi Discord"
           >
-            Apa itu discord?
+            Apa itu Discord?
           </a>
         </div>
       </div>
