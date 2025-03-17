@@ -40,7 +40,7 @@ npm run dev
 pnpm dev
 # or
 bun dev
-
+```
 
 ## 📚 Project Structure
 
