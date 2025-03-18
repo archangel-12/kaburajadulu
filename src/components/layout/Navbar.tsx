@@ -10,14 +10,15 @@ export function Navbar() {
   }
 
   return (
-    <nav className="container mx-auto py-4 flex items-center justify-between">
+    <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
       {/* Logo */}
-      <Link href="/" className="font-bold text-lg flex items-center pl-4 sm:pl-0" aria-label="Kembali ke halaman utama">
+      <Link href="/" className="font-bold text-lg flex items-center" aria-label="Kembali ke halaman utama">
         <Image 
           src="/icon.svg" 
           alt="KaburAjaDulu Logo"
-          width={160} 
-          height={32} 
+          width={140}
+          height={28}
+          className="w-32 sm:w-40 h-auto"
           priority
         />
       </Link>
@@ -26,7 +27,7 @@ export function Navbar() {
       <div className="flex items-center">
         <DiscordButton 
           variant="outlined" 
-          className="sm:text-base text-sm sm:py-2 py-2" 
+          className="text-sm sm:text-base px-3 sm:px-4 py-2" 
           onClick={handleDiscordClick}
           ariaLabel="Gabung dengan komunitas #KaburAjaDulu di Discord"
           iconOnly={true}
@@ -36,4 +37,4 @@ export function Navbar() {
   )
 }
 
-export default Navbar 
+export default Navbar
