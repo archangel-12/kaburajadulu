@@ -20,10 +20,11 @@ export default function DestinationCard({
 }: DestinationCardProps) {
   return (
     <div
-      className={`relative overflow-hidden border-8 border-white ${className}`}
+      className={`relative overflow-hidden border-8 border-white hover:scale-105 hover:-rotate-2 hover:z-30 transition-all duration-300 ease-in-out ${className}`}
       style={{
         boxShadow: "8px 28px 44px 0px rgba(0, 0, 0, 0.17)",
         borderRadius: "32px",
+        transformOrigin: "center center",
         ...style
       }}
     >
@@ -59,4 +60,3 @@ export default function DestinationCard({
     </div>
   )
 }
-
