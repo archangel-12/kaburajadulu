@@ -1,25 +1,32 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 interface DiscordButtonProps {
-  variant?: "filled" | "outlined" | "outlined-no-icon" | "filled-no-icon"
-  className?: string
-  onClick?: () => void
-  ariaLabel?: string
-  iconOnly?: boolean
+  variant?: "filled" | "outlined" | "outlined-no-icon" | "filled-no-icon";
+  className?: string;
+  onClick?: () => void;
+  ariaLabel?: string;
+  iconOnly?: boolean;
 }
 
-export function DiscordButton({ variant = "filled", className, onClick, ariaLabel = "Join our Discord server", iconOnly = false }: DiscordButtonProps) {
-  const baseClasses = "h-10 rounded-full text-[14px] font-medium"
-  
+export function DiscordButton({
+  variant = "filled",
+  className,
+  onClick,
+  ariaLabel = "Join our Discord server",
+  iconOnly = false,
+}: DiscordButtonProps) {
+  const baseClasses =
+    "h-10 rounded-full text-[14px] font-medium cursor-pointer";
+
   // Responsive icon classes based on iconOnly prop
-  const iconClasses = iconOnly 
+  const iconClasses = iconOnly
     ? "m-0 sm:mr-2 sm:-ml-1" // Icon-only on mobile
-    : "mr-2 -ml-1" // Always show with text
-    
+    : "mr-2 -ml-1"; // Always show with text
+
   // Text visibility classes based on iconOnly prop
-  const textClasses = iconOnly ? "hidden sm:inline" : ""
+  const textClasses = iconOnly ? "hidden sm:inline" : "";
 
   // Different button variants based on the image
   switch (variant) {
@@ -27,14 +34,19 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
       return (
         <Button
           variant="outline"
-          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"} ${className}`}
+          className={`${baseClasses} border-2 border-primary text-primary hover:bg-primary/10 ${
+            iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"
+          } ${className}`}
           onClick={onClick}
           aria-label={ariaLabel}
         >
-          <DiscordIconBlue className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
+          <DiscordIconBlue
+            className={`w-6 h-6 ${iconClasses}`}
+            aria-hidden="true"
+          />
           <span className={textClasses}>Join our Discord server</span>
         </Button>
-      )
+      );
     case "outlined-no-icon":
       return (
         <Button
@@ -45,7 +57,7 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
         >
           <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
-      )
+      );
     case "filled-no-icon":
       return (
         <Button
@@ -56,26 +68,36 @@ export function DiscordButton({ variant = "filled", className, onClick, ariaLabe
         >
           <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
-      )
+      );
     case "filled":
     default:
       return (
         <Button
           variant="default"
-          className={`${baseClasses} bg-primary hover:bg-primary/90 ${iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"} ${className}`}
+          className={`${baseClasses} bg-primary hover:bg-primary/90 ${
+            iconOnly ? "px-3 sm:px-5 flex items-center justify-center" : "px-5"
+          } ${className}`}
           onClick={onClick}
           aria-label={ariaLabel}
         >
-          <DiscordIconWhite className={`w-6 h-6 ${iconClasses}`} aria-hidden="true" />
+          <DiscordIconWhite
+            className={`w-6 h-6 ${iconClasses}`}
+            aria-hidden="true"
+          />
           <span className={textClasses}>Join our Discord server</span>
         </Button>
-      )
+      );
   }
 }
 
 function DiscordIconWhite({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <g clipPath="url(#clip0_1_27)">
         <path
           d="M10.6828 12.6591C10.6828 13.6228 9.99233 14.407 9.12421 14.407C8.26968 14.407 7.56561 13.6228 7.56561 12.6591C7.56561 11.6958 8.25608 10.9111 9.12421 10.9111C9.99889 10.9111 10.6964 11.7028 10.6828 12.6591Z"
@@ -96,12 +118,17 @@ function DiscordIconWhite({ className }: { className?: string }) {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
 
 function DiscordIconBlue({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <g clipPath="url(#clip0_1_36)">
         <path
           d="M10.6828 12.6591C10.6828 13.6228 9.99233 14.407 9.12421 14.407C8.26968 14.407 7.56561 13.6228 7.56561 12.6591C7.56561 11.6958 8.25608 10.9111 9.12421 10.9111C9.99889 10.9111 10.6964 11.7028 10.6828 12.6591Z"
@@ -122,5 +149,5 @@ function DiscordIconBlue({ className }: { className?: string }) {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
