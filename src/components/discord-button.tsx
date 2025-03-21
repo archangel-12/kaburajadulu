@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 
 interface DiscordButtonProps {
-  variant?: "filled" | "outlined" | "outlined-no-icon" | "filled-no-icon";
-  className?: string;
-  onClick?: () => void;
-  ariaLabel?: string;
-  iconOnly?: boolean;
+  variant?: "filled" | "outlined" | "outlined-no-icon" | "filled-no-icon"
+  className?: string
+  onClick?: () => void
+  ariaLabel?: string
+  iconOnly?: boolean
 }
 
 export function DiscordButton({
@@ -18,15 +18,15 @@ export function DiscordButton({
   iconOnly = false,
 }: DiscordButtonProps) {
   const baseClasses =
-    "h-10 rounded-full text-[14px] font-medium cursor-pointer";
+    "h-10 rounded-full text-[14px] font-medium cursor-pointer"
 
   // Responsive icon classes based on iconOnly prop
   const iconClasses = iconOnly
     ? "m-0 sm:mr-2 sm:-ml-1" // Icon-only on mobile
-    : "mr-2 -ml-1"; // Always show with text
+    : "mr-2 -ml-1" // Always show with text
 
   // Text visibility classes based on iconOnly prop
-  const textClasses = iconOnly ? "hidden sm:inline" : "";
+  const textClasses = iconOnly ? "hidden sm:inline" : ""
 
   // Different button variants based on the image
   switch (variant) {
@@ -46,7 +46,7 @@ export function DiscordButton({
           />
           <span className={textClasses}>Join our Discord server</span>
         </Button>
-      );
+      )
     case "outlined-no-icon":
       return (
         <Button
@@ -57,7 +57,7 @@ export function DiscordButton({
         >
           <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
-      );
+      )
     case "filled-no-icon":
       return (
         <Button
@@ -68,7 +68,7 @@ export function DiscordButton({
         >
           <span className="hidden sm:inline">Join our Discord server</span>
         </Button>
-      );
+      )
     case "filled":
     default:
       return (
@@ -86,7 +86,7 @@ export function DiscordButton({
           />
           <span className={textClasses}>Join our Discord server</span>
         </Button>
-      );
+      )
   }
 }
 
@@ -118,7 +118,7 @@ function DiscordIconWhite({ className }: { className?: string }) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
 
 function DiscordIconBlue({ className }: { className?: string }) {
@@ -149,5 +149,5 @@ function DiscordIconBlue({ className }: { className?: string }) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
