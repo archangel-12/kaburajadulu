@@ -18,7 +18,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://kaburajadulu.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.kaburajadulu.com'),
   title: "#KaburAjaDulu | Jelajahi Peluang Internasional",
   description: "Temukan peluang untuk bekerja, belajar, atau menjelajahi dunia dengan sumber daya komprehensif, daftar pekerjaan, beasiswa, kelas bahasa, dan banyak lagi.",
   keywords: ["peluang internasional", "kerja di luar negeri", "kuliah di luar negeri", "traveling", "beasiswa", "kelas bahasa", "karir global", "komunitas expatriat"],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.kaburajadulu.com/',
   },
   openGraph: {
     title: "#KaburAjaDulu | Jelajahi Peluang Internasional",
