@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 interface GithubButtonProps {
-  className?: string;
-  onClick?: () => void;
-  ariaLabel?: string;
+  className?: string
+  onClick?: () => void
+  ariaLabel?: string
 }
 
 export function GithubButton({
@@ -31,7 +31,7 @@ export function GithubButton({
       <GithubIcon className="w-6 h-6" aria-hidden="true" />
       Jadi Kontributor Github
     </Button>
-  );
+  )
 }
 
 function GithubIcon({ className }: { className?: string }) {
@@ -61,5 +61,5 @@ function GithubIcon({ className }: { className?: string }) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
