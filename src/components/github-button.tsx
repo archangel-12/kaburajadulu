@@ -9,7 +9,11 @@ interface GithubButtonProps {
   ariaLabel?: string
 }
 
-export function GithubButton({ className, onClick, ariaLabel = "Jadi Kontributor Github" }: GithubButtonProps) {
+export function GithubButton({
+  className,
+  onClick,
+  ariaLabel = "Jadi Kontributor Github",
+}: GithubButtonProps) {
   return (
     <Button
       variant="default"
@@ -18,7 +22,8 @@ export function GithubButton({ className, onClick, ariaLabel = "Jadi Kontributor
         "bg-[#111111] hover:bg-[#111111]/90 text-white",
         "shadow-[2px_4px_16px_0px_rgba(0,0,0,0.32)]",
         "font-medium",
-        className,
+        "cursor-pointer",
+        className
       )}
       onClick={onClick}
       aria-label={ariaLabel}
@@ -47,7 +52,12 @@ function GithubIcon({ className }: { className?: string }) {
       </g>
       <defs>
         <clipPath id="clip0_11_461">
-          <rect width="24" height="24" fill="white" transform="translate(0.5)" />
+          <rect
+            width="24"
+            height="24"
+            fill="white"
+            transform="translate(0.5)"
+          />
         </clipPath>
       </defs>
     </svg>
