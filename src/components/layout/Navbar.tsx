@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { DiscordButton } from '../discord-button'
+import { DISCORD_URL } from '@/constants/urls'
 
 export function Navbar() {
   const handleDiscordClick = () => {
-    window.open('https://discord.gg/yxyjeTkapG', '_blank')
+    window.open(DISCORD_URL, '_blank')
   }
 
   return (

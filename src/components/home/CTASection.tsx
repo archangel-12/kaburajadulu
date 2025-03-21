@@ -4,7 +4,7 @@ import { DiscordButton } from '../discord-button'
 
 export function CTASection() {
   const handleDiscordClick = () => {
-    window.open('https://discord.gg/yxyjeTkapG', '_blank')
+    window.open('https://discord.com/invite/KaburAjaDulu', '_blank')
   }
 
   return (

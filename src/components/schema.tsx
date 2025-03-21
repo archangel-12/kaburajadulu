@@ -35,7 +35,7 @@ export function CommunityJsonLd() {
           "url": "https://www.kaburajadulu.com",
           "logo": "https://www.kaburajadulu.com/favicon.ico",
           "sameAs": [
-            "https://discord.gg/yxyjeTkapG",
+            "https://discord.com/invite/KaburAjaDulu",
             "https://github.com/0xrsydn/kaburajadulu"
           ]
         })
