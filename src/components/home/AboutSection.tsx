@@ -24,7 +24,7 @@ export function AboutSection() {
             onClick={handleGithubClick}
           />
           <a 
-            href="mailto:contact@kaburajadulu.com" 
+            href="mailto:kaburajadulusocials@gmail.com" 
             className="text-base underline decoration-1 hover:text-primary transition-colors mt-2 sm:mt-0"
             aria-label="Berikan saran atau masukan di GitHub"
           >
