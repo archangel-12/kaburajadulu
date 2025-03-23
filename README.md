@@ -2,10 +2,10 @@
 
 <div align="center">
   <a href="https://discord.com/invite/KaburAjaDulu">
-    <img src="/public/intoTheLmao.jpg" alt="KaburAjaDulu_logo" width="90" height="90">
+    <img src="/public/intoTheLmao.jpg" alt="KaburAjaDulu_logo" width="500">
   </a>
 
-  <h3 align="center">#KaburAjaDulu</h3>
+  <h3 align="center">Welcome to the #KaburAjaDulu official repository :)</h3>
 </div>
 
 <details>
