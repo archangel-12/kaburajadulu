@@ -12,7 +12,7 @@
     <summary>Table of Contents</summary>
     <ol>
         <li>
-            <a href="#-Kabur-Aja-Dulu"># KaburAjaDulu</a>
+            <a href="#-Kabur-Aja-Dulu">KaburAjaDulu</a>
         </li>
         <li><a href="#🚀-Mission-&-Vision">🚀 Mission & Vision</a></li>
         <li>
