@@ -1,26 +1,65 @@
-# KaburAjaDulu
+<br />
 
-KaburAjaDulu is an open-source platform helping Indonesians explore study and work opportunities abroad. Our mission is to provide accessible, accurate information and build a supportive community for those seeking international education and career paths.
+<div align="center">
+  <a href="https://discord.com/invite/KaburAjaDulu">
+    <img src="/public/intoTheLmao.jpg" alt="KaburAjaDulu_logo" width="90" height="90">
+  </a>
+
+  <h3 align="center">#KaburAjaDulu</h3>
+</div>
+
+<details>
+    <summary>Table of Contents</summary>
+    <ol>
+        <li>
+            <a href="#-Kabur-Aja-Dulu"># KaburAjaDulu</a>
+        </li>
+        <li><a href="#🚀-Mission-&-Vision">🚀 Mission & Vision</a></li>
+        <li>
+            <a href="#🛠️-Getting-Started">🛠️ Getting Started</a>
+            <ul>
+                <li><a href="#Prerequisites">Prerequisites</a></li>
+                <li><a href="#Installation">Installation</a></li>
+            </ul>
+        </li>
+        <li><a href="#📚-Project-Structure">📚 Project Structure</a></li>
+        <li>
+          <a href="#🤝-Contributing">🤝 Contributing</a>
+            <ul>
+                <li><a href="#Code-Contributions">Code Contributions</a></li>
+                <li><a href="#Guidelines">Guidelines</a></li>
+                <li><a href="#Guidelines">🗺️ Roadmap</a></li>
+            </ul>
+        </li>
+    </ol>
+</details>
+
+<br/>
+
+# KaburAjaDulu
+KaburAjaDulu is an open-source platform that helps Indonesians explore study and work opportunities abroad. Our mission is to provide accessible, accurate information and build a supportive community for those seeking international education and career paths
 
 ## 🚀 Mission & Vision
+We believe that international experience has the power to transform lives and broaden horizons. Our platform is dedicated to:
 
-We believe that international experience can transform lives and open new horizons. Our platform aims to:
+- **Providing job opportunities**: Gain access to insider insights on companies and referral networks. Many job openings are not publicly advertised, making these connections invaluable.
 
-- **Share job opportunities** - Find insider information about companies for referrals. This is crucial, as not all job openings are publicly advertised.
-- **Language learning** - Access expert advice from those who have already gone abroad, including tips and preparation guidance.
-- **Scholarship sharing** - Discover opportunities for studying abroad through scholarships and financial aid programs.
-- **Expert mentorship** - Learn from experienced individuals who have successfully navigated international education and career paths.
+- **Facilitating language learning**: Benefit from expert guidance and firsthand advice from individuals who have successfully navigated the process of studying and working abroad.
+
+- **Sharing scholarship opportunities**: Explore funding options, including scholarships and financial aid programs, to support international education.
+
+- **Offering expert mentorship**: Learn from seasoned professionals who have successfully pursued global education and career paths
+
+<br/>
 
 ## 🛠️ Getting Started
-
 ### Prerequisites
 
 - Node.js 18.0 or higher
-- npm, pnpm, or yarn
+- npm, pnpm, yarn, or bun
 
 ### Installation
-
-```bash
+```sh
 # Clone the repository
 git clone https://github.com/KaburAjaDulu-Community/kaburajadulu.git
 
@@ -44,7 +83,7 @@ bun dev
 
 ## 📚 Project Structure
 
-```
+```sh
 /public            # Static assets
 /src
   /app             # Next.js App Router
@@ -56,7 +95,6 @@ bun dev
 ```
 
 ## 🤝 Contributing
-
 We welcome contributions from everyone! Here's how you can help:
 
 ### Code Contributions
