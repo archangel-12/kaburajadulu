@@ -31,12 +31,12 @@ export function CommunityJsonLd() {
           "@type": "Organization",
           "name": "KaburAjaDulu",
           "description": "Komunitas untuk yang ingin belajar dan bekerja di luar negeri",
-          "@id": "https://www.kaburajadulu.com/#community",
-          "url": "https://www.kaburajadulu.com",
-          "logo": "https://www.kaburajadulu.com/favicon.ico",
+          "@id": "https://kaburajadulu.com/#community",
+          "url": "https://kaburajadulu.com",
+          "logo": "https://kaburajadulu.com/favicon.ico",
           "sameAs": [
             "https://discord.com/invite/KaburAjaDulu",
-            "https://github.com/0xrsydn/kaburajadulu"
+            "https://github.com/KaburAjaDul/kaburajadulu"
           ]
         })
       }}
