@@ -25,6 +25,7 @@ export function HeroSection() {
           />
           <a 
             href="https://discord.com/company" 
+            target='_blank'
             className="text-primary hover:underline font-medium mt-2 sm:mt-0"
             aria-label="Pelajari tentang aplikasi Discord"
           >
