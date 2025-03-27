@@ -22,7 +22,7 @@ We believe that international experience can transform lives and open new horizo
 
 ```bash
 # Clone the repository
-git clone https://github.com/KaburAjaDulu-Community/kaburajadulu.git
+git clone https://github.com/KaburAjaDul/kaburajadulu.git
 
 # Navigate to the project
 cd kaburajadulu
@@ -77,11 +77,10 @@ We welcome contributions from everyone! Here's how you can help:
 
 ## 🗺️ Roadmap
 
-- [x] Landing page with basic information
+- [X] Landing page with basic information
 - [ ] Blog with guides and resources
 - [ ] Curated list of scholarship, programs, and job opportunities
 - [ ] More to come...
-
 
 ---
 
