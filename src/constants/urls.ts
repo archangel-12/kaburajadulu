@@ -1,4 +1,4 @@
 // Application URLs
-export const DISCORD_URL = 'https://discord.com/invite/KaburAjaDulu'
+export const DISCORD_URL = "https://discord.com/invite/KaburAjaDulu";
 
-// Add other URLs here as needed 
+// Add other URLs here as needed
