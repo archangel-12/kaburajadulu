@@ -7,9 +7,15 @@ import AboutSection from '../components/home/AboutSection'
 import CTASection from '../components/home/CTASection'
 import Footer from '../components/layout/Footer'
 import '../styles/global.css'
+
+// Get GSC verification from environment (you'll add this later)
+const gscVerification = import.meta.env.GOOGLE_SITE_VERIFICATION;
 ---
 
-<Layout title="#KaburAjaDulu | Jelajahi Peluang Internasional">
+<Layout 
+  title="#KaburAjaDulu | Jelajahi Peluang Internasional"
+  gscVerification={gscVerification}
+>
   <Navbar client:load />
   <main>
     <HeroSection client:load />
