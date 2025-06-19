@@ -1,5 +1,3 @@
-"use client"
-
 import { DiscordButton } from '../discord-button'
 
 export function CTASection() {
@@ -23,4 +21,4 @@ export function CTASection() {
   )
 }
 
-export default CTASection 
+export default CTASection

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
@@ -27,7 +26,7 @@ export default function BlogCard({
       </CardHeader>
       <CardContent className="p-0 px-4">
         <div className="relative w-full h-64 rounded-lg overflow-hidden">
-          <Image src={imageUrl || "/placeholder.svg"} alt={imageAlt} fill className="object-cover" />
+          <img src={imageUrl || "/placeholder.svg"} alt={imageAlt} className="w-full h-full object-cover" />
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
@@ -36,4 +35,3 @@ export default function BlogCard({
     </Card>
   )
 }
-

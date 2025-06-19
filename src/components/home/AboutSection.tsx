@@ -1,5 +1,3 @@
-"use client";
-
 import { GithubButton } from "../../components/github-button";
 
 export function AboutSection() {
