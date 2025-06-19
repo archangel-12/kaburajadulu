@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/layout/Navbar'
+import HeroSection from '../components/home/HeroSection'
+import DestinationShowcase from '../components/home/DestinationShowcase'
+import AboutSection from '../components/home/AboutSection'
+import CTASection from '../components/home/CTASection'
+import Footer from '../components/layout/Footer'
+import '../styles/global.css'
+---
+
+<Layout title="#KaburAjaDulu | Jelajahi Peluang Internasional">
+  <Navbar client:load />
+  <main>
+    <HeroSection client:load />
+    <DestinationShowcase client:load />
+    <AboutSection client:load />
+    <CTASection client:load />
+  </main>
+  <Footer client:load />
+</Layout>

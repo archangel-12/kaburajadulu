@@ -1,6 +1,3 @@
-"use client"
-
-import Image from "next/image"
 import { MapPin } from "lucide-react"
 
 interface DestinationCardProps {
@@ -29,15 +26,11 @@ export default function DestinationCard({
       }}
     >
       <div className="relative h-full w-full">
-        <Image 
+        <img 
           src={imageUrl || "/placeholder.svg"} 
           alt={`Destination: ${location}`} 
-          fill 
-          className="object-cover"
-          sizes={sizes}
+          className="w-full h-full object-cover"
           loading="eager"
-          priority={true}
-          quality={85}
         />
         
         {/* Gradient overlay */}

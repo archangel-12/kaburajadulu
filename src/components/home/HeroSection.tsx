@@ -1,10 +1,10 @@
-"use client"
-
 import { DiscordButton } from '../discord-button'
 
 export function HeroSection() {
   const handleDiscordClick = () => {
-    window.open('https://discord.com/invite/KaburAjaDulu', '_blank')
+    if (typeof window !== 'undefined') {
+      window.open('https://discord.com/invite/KaburAjaDulu', '_blank')
+    }
   }
 
   return (
@@ -37,4 +37,4 @@ export function HeroSection() {
   )
 }
 
-export default HeroSection 
+export default HeroSection
