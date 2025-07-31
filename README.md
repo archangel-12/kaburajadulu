@@ -69,8 +69,31 @@ We believe that international experience has the power to transform lives and br
 
 ### Installation
 Below is the procedure for installing the project:
+
+#### For Development/Contributing
 ```sh
 # Clone the repository
+git clone https://github.com/KaburAjaDul/kaburajadulu.git
+
+# Navigate to the project
+cd kaburajadulu
+
+# Switch to development branch
+git checkout dev
+
+# Install dependencies
+bun install
+
+# Start the development server
+bun dev
+
+# Build for production (test before contributing)
+bun run build
+```
+
+#### For General Use
+```sh
+# Clone the repository (main branch)
 git clone https://github.com/KaburAjaDul/kaburajadulu.git
 
 # Navigate to the project
@@ -113,20 +136,31 @@ bun dev
 We welcome contributions from everyone! Here's how you can help:
 
 ### Code Contributions
-1. Fork the repository,
-2. Create a feature branch:
+1. Fork the repository
+2. **Switch to the dev branch** (important for contributors):
+    ```sh
+   git checkout dev
+   ```
+3. Create a feature branch from dev:
     ```sh
    git checkout -b feature/amazing-feature
    ```
-3. Commit your changes:
+4. Make your changes and test them:
+    ```sh
+   # Test your changes
+   bun run build
+   
+   # Ensure the build passes before committing
+   ```
+5. Commit your changes:
     ```sh
    git commit -m 'Add some amazing feature'
    ```
-4. Push to the branch:
+6. Push to the branch:
     ```sh
    git push origin feature/amazing-feature
    ```
-5. Open a Pull Request
+7. Open a Pull Request **targeting the dev branch** (not main)
 
 ### Guidelines
 - Follow the existing code style and conventions
