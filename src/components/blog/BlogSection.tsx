@@ -33,33 +33,35 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
   return (
     <section className="py-16 px-4">
       <div className="w-full max-w-[1040px] mx-auto">
-        <div className="flex items-center justify-between w-full h-10 mb-12">
-          <div className="flex items-center gap-10">
-            <h2 className="text-[32px] font-bold text-gray-900 leading-none">Blog</h2>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full mb-12">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
+            <h2 className="text-[24px] md:text-[32px] font-bold text-gray-900 leading-none">Blog</h2>
             
-            <div className="flex items-center gap-4 w-[595px] h-[21px]">
-              {categories.map((category, index) => (
-                <React.Fragment key={category}>
-                  <button
-                    onClick={() => setSelectedCategory(category)}
-                    className={cn(
-                      "text-[17px] text-gray-900 transition-all whitespace-nowrap",
-                      selectedCategory === category 
-                        ? "font-semibold text-blue-600 border-b-2 border-blue-600" 
-                        : "font-normal hover:opacity-70"
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+              <div className="flex items-center gap-4 w-max md:w-auto pb-2 md:pb-0">
+                {categories.map((category, index) => (
+                  <React.Fragment key={category}>
+                    <button
+                      onClick={() => setSelectedCategory(category)}
+                      className={cn(
+                        "text-[15px] md:text-[17px] text-gray-900 transition-all whitespace-nowrap",
+                        selectedCategory === category 
+                          ? "font-semibold text-blue-600 border-b-2 border-blue-600" 
+                          : "font-normal hover:opacity-70"
+                      )}
+                    >
+                      {category}
+                    </button>
+                    {index < categories.length - 1 && (
+                      <div className="w-1 h-1 bg-gray-900 opacity-20 rounded-full flex-shrink-0"></div>
                     )}
-                  >
-                    {category}
-                  </button>
-                  {index < categories.length - 1 && (
-                    <div className="w-1 h-1 bg-gray-900 opacity-20 rounded-full"></div>
-                  )}
-                </React.Fragment>
-              ))}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           </div>
           
-          <button className="text-[17px] text-gray-900 hover:opacity-70 transition-opacity">
+          <button className="hidden md:block text-[17px] text-gray-900 hover:opacity-70 transition-opacity whitespace-nowrap">
             Lainnya
           </button>
         </div>

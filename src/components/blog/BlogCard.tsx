@@ -20,7 +20,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     <div
       onClick={onClick}
       className={cn(
-        "w-[336px] h-[328px] p-2 bg-white rounded-2xl shadow-[4px_4px_20px_0px_rgba(0,0,0,0.08)] cursor-pointer transition-all duration-0 hover:shadow-[4px_4px_24px_0px_rgba(0,0,0,0.12)]",
+        "w-full h-[328px] p-2 bg-white rounded-2xl shadow-[4px_4px_20px_0px_rgba(0,0,0,0.08)] cursor-pointer transition-all duration-0 hover:shadow-[4px_4px_24px_0px_rgba(0,0,0,0.12)]",
         "flex flex-col gap-2"
       )}
     >
