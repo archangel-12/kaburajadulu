@@ -63,7 +63,7 @@ src/
 
 The project is in early development with:
 - ✅ Landing page implementation
-- ⏳ Blog system (planned)
+- ⏳ Blog system (in development - BlogCard and BlogSection components exist)
 - ⏳ Scholarship/job opportunities listing (planned)
 - Single page application currently (only index.astro exists)
 
@@ -73,3 +73,12 @@ The project is in early development with:
 2. **Styling**: Use Tailwind CSS classes with the cn() utility for conditional styling
 3. **Type Safety**: TypeScript strict mode is enabled - ensure all code is properly typed
 4. **SEO**: Update Layout.astro props when creating new pages (title, description, canonical)
+5. **ShadCN Integration**: Uses ShadCN components configured in components.json with New York style
+
+## Blog System Architecture
+
+Blog functionality is being implemented with:
+- `src/components/blog/BlogCard.tsx`: Individual blog post cards
+- `src/components/blog/BlogSection.tsx`: Blog listing section
+- `src/data/blogPosts.ts`: Blog post data structure
+- Blog posts currently use mockup data for development
