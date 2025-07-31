@@ -5,7 +5,9 @@ import HeroSection from '../components/home/HeroSection'
 import DestinationShowcase from '../components/home/DestinationShowcase'
 import AboutSection from '../components/home/AboutSection'
 import CTASection from '../components/home/CTASection'
+import { BlogSection } from '../components/blog/BlogSection'
 import Footer from '../components/layout/Footer'
+import { blogPosts } from '../data/blogPosts'
 import '../styles/global.css'
 
 // Get GSC verification from environment (you'll add this later)
@@ -21,6 +23,7 @@ const gscVerification = import.meta.env.GOOGLE_SITE_VERIFICATION;
     <HeroSection client:load />
     <DestinationShowcase client:load />
     <AboutSection client:load />
+    <BlogSection client:load posts={blogPosts} />
     <CTASection client:load />
   </main>
   <Footer client:load />
