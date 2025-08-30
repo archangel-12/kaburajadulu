@@ -7,7 +7,9 @@ import AboutSection from '../components/home/AboutSection'
 import CTASection from '../components/home/CTASection'
 import { BlogSection } from '../components/blog/BlogSection'
 import Footer from '../components/layout/Footer'
-import { blogPosts } from '../data/blogPosts'
+import { getCollection } from 'astro:content'
+
+const blogPosts = await getCollection('blog', ({ data }) => !data.draft)
 import '../styles/global.css'
 
 // Get GSC verification from environment (you'll add this later)

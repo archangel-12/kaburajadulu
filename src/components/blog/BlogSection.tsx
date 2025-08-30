@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { BlogCard } from './BlogCard';
+import type { CollectionEntry } from 'astro:content';
 
 export interface BlogPost {
   id: string;
@@ -12,7 +13,7 @@ export interface BlogPost {
 }
 
 interface BlogSectionProps {
-  posts: BlogPost[];
+  posts: CollectionEntry<'blog'>[];
 }
 
 const categories = ['Semua', 'Lowongan', 'Beasiswa', 'Event', 'Kelas Bahasa', 'Berita'];
@@ -22,12 +23,10 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
 
   const filteredPosts = selectedCategory === 'Semua' 
     ? posts 
-    : posts.filter(post => post.category === selectedCategory);
+    : posts.filter(post => post.data.category === selectedCategory);
 
-  const handleCardClick = (link?: string) => {
-    if (link) {
-      window.location.href = link;
-    }
+  const handleCardClick = (slug: string) => {
+    window.location.href = `/blog/${slug}`;
   };
 
   return (
@@ -70,11 +69,15 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
           {filteredPosts.map((post) => (
             <BlogCard
               key={post.id}
-              category={post.category}
-              date={post.date}
-              imageUrl={post.imageUrl}
-              title={post.title}
-              onClick={() => handleCardClick(post.link)}
+              category={post.data.category}
+              date={post.data.pubDate.toLocaleDateString('id-ID', { 
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric' 
+              })}
+              imageUrl={post.data.image}
+              title={post.data.title}
+              onClick={() => handleCardClick(post.id)}
             />
           ))}
         </div>

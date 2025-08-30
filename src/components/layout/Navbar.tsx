@@ -22,7 +22,13 @@ export function Navbar() {
       </a>
       
       {/* Navigation Links */}
-      <div className="flex items-center">
+      <div className="flex items-center gap-4">
+        <a 
+          href="/#blog" 
+          className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm sm:text-base"
+        >
+          Blog
+        </a>
         <DiscordButton 
           variant="outlined" 
           className="text-sm sm:text-base px-3 sm:px-4 py-2" 
