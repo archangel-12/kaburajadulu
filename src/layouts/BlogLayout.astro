@@ -1,0 +1,94 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  author?: string;
+  pubDate?: Date;
+  category?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title, 
+  description, 
+  author, 
+  pubDate, 
+  category, 
+  image, 
+  canonical 
+} = Astro.props;
+
+// Generate canonical URL for blog posts
+const canonicalURL = canonical || `https://kaburajadulu.com${Astro.url.pathname}`;
+
+// Enhanced description with category info
+const enhancedDescription = description || `${category ? `${category}: ` : ''}${title} - Artikel dari KaburAjaDulu tentang peluang internasional.`;
+---
+
+<Layout 
+  title={`${title} | KaburAjaDulu`}
+  description={enhancedDescription}
+  canonical={canonicalURL}
+>
+  <!-- Blog-specific JSON-LD Schema -->
+  <script type="application/ld+json" slot="head" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": enhancedDescription,
+      "author": {
+        "@type": "Organization",
+        "name": author || "Tim KaburAjaDulu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KaburAjaDulu",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kaburajadulu.com/icon.svg"
+        }
+      },
+      "datePublished": pubDate ? pubDate.toISOString() : undefined,
+      "image": image ? `https://kaburajadulu.com${image}` : "https://kaburajadulu.com/images/og-image.png",
+      "url": canonicalURL,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalURL
+      }
+    }
+  </script>
+
+  <!-- Open Graph for blog posts -->
+  <meta slot="head" property="og:type" content="article" />
+  {author && <meta slot="head" property="article:author" content={author} />}
+  {pubDate && <meta slot="head" property="article:published_time" content={pubDate.toISOString()} />}
+  {category && <meta slot="head" property="article:section" content={category} />}
+  {image && <meta slot="head" property="og:image" content={`https://kaburajadulu.com${image}`} />}
+
+  <!-- Fixed Header with Navbar -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+    <Navbar client:load />
+  </header>
+
+  <!-- Main Content -->
+  <main class="min-h-screen bg-white pt-20">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <Footer client:load />
+</Layout>
+
+<style>
+  /* Ensure proper spacing and layout for blog content */
+  main {
+    position: relative;
+  }
+</style>
