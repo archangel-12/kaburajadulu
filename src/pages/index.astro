@@ -25,7 +25,7 @@ const gscVerification = import.meta.env.GOOGLE_SITE_VERIFICATION;
     <HeroSection client:load />
     <DestinationShowcase client:load />
     <AboutSection client:load />
-    <BlogSection client:load posts={blogPosts} />
+    {blogPosts.length > 0 && <BlogSection client:load posts={blogPosts} />}
     <CTASection client:load />
   </main>
   <Footer client:load />

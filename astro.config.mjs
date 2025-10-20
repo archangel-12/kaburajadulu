@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'http://localhost:4321', // Development URL - change to your production URL when deploying
+  site: 'https://kaburajadulu.com',
   integrations: [react()],
   vite: {
     plugins: [tailwind()],

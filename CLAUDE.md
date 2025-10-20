@@ -9,7 +9,7 @@ KaburAjaDulu is an Astro-based platform helping Indonesians explore study and wo
 ## Development Commands
 
 ```bash
-# Install dependencies
+# Install dependencies (project uses Bun as package manager)
 bun install
 
 # Start development server
@@ -20,6 +20,9 @@ bun run build
 
 # Preview production build
 bun run preview
+
+# Run Astro CLI commands
+bun run astro
 ```
 
 ## Architecture Overview
@@ -37,19 +40,21 @@ bun run preview
 src/
 ├── components/         # React components
 │   ├── blog/          # Blog components (BlogCard, BlogSection)
-│   ├── home/          # Landing page sections (HeroSection, AboutSection, etc.)
+│   ├── home/          # Landing page sections (HeroSection, AboutSection, DestinationShowcase, CTASection)
 │   ├── layout/        # Layout components (Navbar, Footer)
-│   └── ui/            # Reusable UI components (Button, Card, Badge)
+│   └── ui/            # ShadCN UI components (Button, Card, Badge, AspectRatio)
 ├── constants/         # Application constants (urls.ts)
 ├── content/           # Astro content collections
-│   ├── blog/          # Markdown blog posts
-│   └── config.ts      # Content collection schemas
-├── layouts/           # Astro layout templates (Layout.astro)
+│   ├── blog/          # Markdown blog posts with frontmatter schema
+│   └── config.ts      # Zod schema definitions for collections
+├── layouts/           # Astro layout templates
+│   ├── Layout.astro   # Base layout with SEO and meta tags
+│   └── BlogLayout.astro # Blog-specific layout
 ├── lib/              # Utility functions (utils.ts with cn() for className merging)
 ├── pages/            # File-based routing
-│   ├── blog/          # Dynamic blog post routes
+│   ├── blog/          # Dynamic blog routes ([...slug].astro)
 │   └── index.astro    # Homepage
-└── styles/           # Global CSS styles
+└── styles/           # Global CSS (global.css with Tailwind)
 ```
 
 ### Key Patterns
@@ -74,6 +79,15 @@ The project is in active development with:
 - ✅ Blog system (complete - content collections, dynamic routing, individual post pages)
 - ⏳ Scholarship/job opportunities listing (planned)
 - Multi-page application with homepage and dynamic blog routes
+
+## Content Collections Architecture
+
+The blog system leverages Astro's content collections for type-safe content management:
+- **Blog Collection**: Located in `src/content/blog/` with markdown files
+- **Schema Validation**: Defined in `src/content/config.ts` with Zod schema
+- **Categories**: Supports "Lowongan", "Beasiswa", "Event", "Kelas Bahasa", "Berita"
+- **Dynamic Routing**: Uses `src/pages/blog/[...slug].astro` for individual posts
+- **Blog Layout**: Dedicated `src/layouts/BlogLayout.astro` for blog post formatting
 
 ## Development Guidelines
 
